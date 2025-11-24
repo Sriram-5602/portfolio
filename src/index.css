@@ -1,0 +1,122 @@
+:root {
+  /* Light Theme (Default) */
+  --bg-color: #eef2f5;
+  /* Darkened from #f8f9fa for better card contrast */
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --accent-color: #0984e3;
+  --card-bg: #ffffff;
+  --border-color: #dfe6e9;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* Component Specific */
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --hero-bg: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  --tag-bg: #f1f2f6;
+  --btn-text: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-primary: #f1f2f6;
+  --text-secondary: #b2bec3;
+  --accent-color: #74b9ff;
+  --card-bg: #2d3436;
+  --border-color: rgba(255, 255, 255, 0.1);
+  /* Softer border for dark mode */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  /* Component Specific */
+  --header-bg: rgba(45, 52, 54, 0.95);
+  --hero-bg: linear-gradient(135deg, #1e1e1e 0%, #2d3436 100%);
+  --tag-bg: #4b4b4b;
+  --btn-text: #2d3436;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Card Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+}
+
+section,
+.timeline-heading {
+  scroll-margin-top: 100px;
+  /* Adjust based on header height */
+}

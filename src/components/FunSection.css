@@ -1,0 +1,23 @@
+.fun-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.fun-full-width {
+    width: 100%;
+}
+
+/* Ensure cards in the grid have same height */
+.deployment-card,
+.music-player-card,
+.github-card {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .fun-grid {
+        grid-template-columns: 1fr;
+    }
+}
