@@ -32,7 +32,16 @@ const DeploymentStatus = () => {
                 }
 
                 const data = await response.json();
-                setDeployments(data.deployments);
+
+                // Filter to get only the latest deployment for each unique project
+                const uniqueDeployments = new Map();
+                data.deployments.forEach(deploy => {
+                    if (!uniqueDeployments.has(deploy.name)) {
+                        uniqueDeployments.set(deploy.name, deploy);
+                    }
+                });
+
+                setDeployments(Array.from(uniqueDeployments.values()));
                 setLoading(false);
             } catch (err) {
                 console.error("Error fetching deployments:", err);
