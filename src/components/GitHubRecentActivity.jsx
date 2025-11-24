@@ -95,7 +95,9 @@ const GitHubRecentActivity = () => {
                 <div className="activity-list">
                     {events.map((event) => (
                         <div key={event.id} className="activity-item">
-                            {getEventIcon(event.type)}
+                            <div className="activity-icon-wrapper">
+                                {getEventIcon(event.type)}
+                            </div>
                             <div className="activity-content">
                                 <span>
                                     {getEventMessage(event)}{' '}

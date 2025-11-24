@@ -73,7 +73,7 @@ export const portfolioData = {
       company: "Zoho Corporation",
       location: "Chennai, India",
       period: "Aug 2022 - May 2023",
-      description: "Developed key features like “Applicable To,” enabling precise course eligibility controls across large enterprises. Enhanced product quality by resolving 60+ functional and security issues, contributing to improved customer satisfaction, stability, and compliance.",
+      description: "Developed key features, enabling precise course eligibility controls across large enterprises. Enhanced product quality by resolving 60+ functional and security issues, contributing to improved customer satisfaction, stability, and compliance.",
       logo: zohoLogo,
       techStack: ["HTML", "CSS", "JavaScript", "Java", "MySQL", "REST APIs", "Struts", "HG (Mercurial)"]
     },

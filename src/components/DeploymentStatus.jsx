@@ -15,13 +15,7 @@ const DeploymentStatus = () => {
     useEffect(() => {
         const fetchDeployments = async () => {
             if (!VERCEL_TOKEN) {
-                // Mock data if no token is provided
-                setDeployments([
-                    { name: "portfolio-v2", state: "READY", created: Date.now() },
-                    { name: "ecommerce-api", state: "BUILDING", created: Date.now() },
-                    { name: "task-manager", state: "ERROR", created: Date.now() },
-                    { name: "blog-cms", state: "READY", created: Date.now() }
-                ]);
+                setError("VITE_VERCEL_TOKEN is missing in .env");
                 setLoading(false);
                 return;
             }
